@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=AtomicAge|Tangerine|serif:weight@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  transition: 0.3s;
+}
+.body {
+  background: #ffff;
+  min-height: fit-content;
+  overflow: hidden;
+
+  /* background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+*/
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #ffff;
+  /*box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5);*/
+  z-index: 1000; /*
+  background-color: rgba(123, 148, 160, 0.158);*/
+  background-color: rgb(223, 213, 213);
+}
+
+.logo {
+  height: 60px;
+  line-height: 60px;
+  /*
+  color: #eff1f3ec;*/
+  color: goldenrod;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+  cursor: pointer;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+#toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: #9051ff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+#toggle::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(5px);
+  transition: 0.5s;
+}
+
+#toggle.active::before {
+  transform: translateY(0px) rotate(45deg);
+}
+#toggle.active::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+#toggle.active {
+  background-color: rgba(223, 111, 134, 0.712);
+}
+#navbar {
+  position: relative;
+  height: 60px;
+  right: 60px;
+  background-color: rgba(123, 148, 160, 0.158);
+  transition: 0.5s;
+  width: 0;
+  overflow: hidden;
+}
+
+#navbar.active {
+  width: 590px;
+}
+
+#navbar ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: #12345e;
+  height: 60px;
+  line-height: 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px;
+  letter-spacing: 2px;
+}
+#navbar ul li a:hover {
+  color: #fff;
+  background: #9051ff;
+}
+
+section {
+  position: relative;
+  transition: ease-in 0.5s;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: max-content;
+  color: black;
+  background-color: white;
+  overflow: hidden;
+}
+
+#home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.541)),
+    url("./rbs/dhwani-mehta-o84mEXyY9eA-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.text {
+  display: flex;
+  position: absolute;
+  color: black;
+  left: 20%;
+  top: 30%;
+  font-family: "poppins", sans-serif;
+
+  text-shadow: 4px 4px 4px rgb(19 11 11);
+
+  color: black;
+}
+.sub {
+  display: flex;
+  position: absolute;
+  color: black;
+  font-size: 5vh;
+  font-family: cursive;
+  left: 53%;
+  top: 42%;
+}
+@media (min-width: 1200px) {
+  .text {
+    font-size: 60px;
+  }
+}
+
+/*----------------login----------------------*/
+#login {
+  box-shadow: inset 0px 0px 60px 40px green;
+  top: 200px;
+  height: max-content;
+  width: max-content;
+  border: 1px solid black;
+  left: 250px;
+
+  bottom: 150px;
+
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+/*-------------------Content-------------------*/
+#content {
+  width: 100%;
+  height: max-content;
+  background-color: white;
+  margin: 0;
+  text-align: center;
+  padding-left: 220px;
+  padding-top: 100px;
+  padding-right: 250px;
+  overflow: scroll;
+}
+
+.our-causes {
+  text-align: justify;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.img1 {
+  height: 300px;
+  width: 500px;
+  float: right;
+  margin: 5px;
+}
+.img2 {
+  height: 300px;
+  width: 400px;
+  float: left;
+  margin: 5px;
+}
+
+.img3 {
+  height: 250px;
+  width: 250px;
+  float: right;
+  margin: 5px;
+}
+p {
+  float: center;
+  text-align: justify;
+  font-size: 12px;
+  color: black;
+}
+strong,
+ul,
+li {
+  font-size: 16px;
+  color: black;
+  list-style: none;
+}
+
+strong,
+p {
+  font-size: 14px;
+  color: black;
+}
+
+.history {
+  position: static;
+  position: absolute;
+  text-align: justify;
+  width: auto;
+  left: 80px;
+  padding-right: 130px;
+  padding-bottom: 80px;
+}
+
+.p1 {
+  right: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  color: black;
+}
+
+.p2 {
+  right: 250px;
+  position: absolute;
+  font-weight: 500;
+  font-size: 15px;
+  color: black;
+}
+
+h1,
+h4 {
+  position: relative;
+  color: tomato;
+}
+/*-----------------home------------------*/
+#home {
+  padding-top: 50px;
+  height: 120vh;
+  width: 100%;
+}
+
+/*----------------Gallery----------------*/
+
+li.gallerybox {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+}
+ul.mw-gallery-packed,
+ul.mw-gallery-packed-overlay {
+  text-align: center;
+  padding-bottom: 100px;
+}
+#gallery {
+  box-shadow: inset 0px 0px 80px 40px coral;
+  top: 100px;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 150px;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+}
+
+/*---------------About------------------
+#footer {
+  position: relative;
+  width: 100%;
+
+  background-image: url("./rbs/footer-bg.png");
+  opacity: 1;
+  background-color: black;
+  top: 240px;
+  height: 400px;
+}
+*/
+/*--------------------------About-------------*/
+#footer {
+  top: 300px;
+  height: max-content;
+  width: 100%;
+  overflow: visible;
+  padding: 55px 0 70px;
+  position: relative;
+  background: url("./rbs/footer-bg.png") repeat scroll 0 -50px rgba(0, 0, 0, 0.9);
+  background-size: 100% 100%;
+  list-style: none;
+}
+
+.col-md-3 {
+  left: 100px;
+  overflow: visible;
+  width: 300px;
+  letter-spacing: 0.1px;
+}
+.social-bar {
+  color: white;
+}
+
+#footer .container {
+  padding: 0;
+}
+
+.newsletter {
+  color: white;
+}
+
+.row {
+  box-sizing: border-box;
+}
+
+/*------------------------------Responsive About-----------------------------*/
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    font-size: 14px;
+  }
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/* --------------------------------------------------------------------------------- making toggle resonsive */
+@media (max-width: 991px) {
+  #navbar {
+    position: fixed;
+    bottom: -100vh;
+    right: 0;
+    width: 100%;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #navbar.active {
+    height: calc(100% - 60px);
+    width: calc(100%);
+    bottom: 0;
+
+    background-color: rgb(223, 213, 213);
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
